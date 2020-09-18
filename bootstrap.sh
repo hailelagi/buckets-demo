@@ -15,15 +15,6 @@ sudo apt-get update -y
 echo "Installs packages. Give your password when asked."
 sudo apt-get --ignore-missing install build-essential git-core curl openssl libssl-dev libcurl4-openssl-dev zlib1g zlib1g-dev libreadline6-dev libyaml-dev libsqlite3-dev libsqlite3-0 sqlite3 libxml2-dev libxslt1-dev libffi-dev software-properties-common libgdm-dev libncurses5-dev automake autoconf libtool bison postgresql postgresql-contrib libpq-dev pgadmin3 libc6-dev tmux -y
 
-echo "Installing kiex - Elixir Version Manager"
-curl -sSL https://raw.githubusercontent.com/taylor/kiex/master/install | bash -s stable
-echo '[[ -s "$HOME/.kiex/scripts/kiex" ]] && source "$HOME/.kiex/scripts/kiex"' >> ~/.bashrc
-
-echo "Fetching Erlang & Elixir Deps"
-wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb && sudo dpkg -i erlang-solutions_2.0_all.deb
-sudo apt-get update -y
-rm -fr erlang-solutions*
-
 echo "Install Erlang"
 sudo apt-get install esl-erlang -y
 
